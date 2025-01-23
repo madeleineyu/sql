@@ -47,15 +47,15 @@ There are several tools online you can use, I'd recommend [Draw.io](https://www.
 
 
 ### My logical model for a small bookstore
-<img src="./images/lmd2.png" width="600">
+<img src="./images/ldm2.png" width="600">
 
 
 
 #### Prompt 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
 
-### My logical model for a small bookstore with employee shifts
-<img src="./images/lmd2-prompt2.png" width="600">
+### My logical model for a small bookstore with employee morning and evening shifts
+<img src="./images/ldm2-prompt2.png" width="600">
 
 
 
