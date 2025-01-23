@@ -65,7 +65,7 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+The Type 1 model overwrites the old value with a new value and does not retain changes, while the Type 2 model does retain changes by adding a new row for the value and keeping the old value in the same file/table.
 ```
 
 ***
