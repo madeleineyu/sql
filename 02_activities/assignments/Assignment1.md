@@ -106,6 +106,11 @@ Please do not pick the exact same tables that I have already diagrammed. For exa
 	- <img src="./images/01_farmers_market_conceptual_model.png" width="600">
 - The column names can be found in a few spots (DB Schema window in the bottom right, the Database Structure tab in the main window by expanding each table entry, at the top of the Browse Data tab in the main window)
 
+#### My logical data model
+The relationship between `customer` and `customer_purchases`.
+
+<img src="./images/ldm1.png" width="500">
+
 ***
 
 ## Section 2:
@@ -205,5 +210,9 @@ Consider, for example, concepts of fariness, inequality, social structures, marg
 
 
 ```
-Your thoughts...
+Databases are the products of a society's value system. In other words, the societal and cultural structures that exist in a particular community will be baked into the database systems that these communities, more or less, arbitrarily construct. This is simply because humans assign value and importance to these different types of structures, and humans ultimately decide the criteria within databases and data systems.
+
+There is also a sense of absolute truth that is afforded to technology. For instance, in the example in the introduction of the article, the registration officer ends up acquiescing to the database system error rather than attempting to resolve the issue, which although uncommon, is not in agreement with the error (Riz's mother was married). However, as this article points out, the establishment of database systems require previously unproblematic idiosyncracies in individuals' records to fit into simplified, binary categories (e.g., TRUE or FALSE). By taking the human-element out of these systems' decision making, one might think this makes the system more fair since everyone is held to the same criteria within the system. However, edge cases like Riz's are often overlooked and provide an example of an individual who is left with a rather unfair and inequitable outcome as a result.
+
+Indeed, databases and data systems allow for more efficient processing of information, but how this information is processed is still influenced by human-made assumptions thought to apply to the population majority, which unfortunately, overlooks population minorities. Though fewer in number, these marginalized populations still deserve fair treatment within their societies. For example, surveys require just two options for gender identity, or include too few (or too general) options for ethnic identity, two cases in which the criteria of the data system for describing a complex factor of 'identity' is far too inflexible and based on outdated schemas. Other factors, such as family and relationships are also subject to subjective value systems embedded in data systems.
 ```
