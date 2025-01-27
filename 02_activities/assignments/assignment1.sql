@@ -11,8 +11,8 @@ FROM customer
 sorted by customer_last_name, then customer_first_ name. */
 SELECT *
 FROM customer
-WHERE customer_id < 11
 ORDER by customer_last_name, customer_first_name
+LIMIT 10
 
 
 --WHERE
