@@ -65,7 +65,7 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-The Type 1 model overwrites the old value with a new value and does not retain changes, while the Type 2 model does retain changes by adding a new row for the value and keeping the old value in the same file/table.
+The Type 1 model overwrites the old value with a new value and does not retain changes, while the Type 2 model does retain changes by adding a new row for the value and keeping the old value in the same file/table. The CUSTOMER_ADDRESS table can be a type 1 model, in which customer addresses will be overwritten with the most updated address associated with customer ID. On the other hand, the CUSTOMER_ADDRESS table can also be a type 2 model and retain changes with the help of a new column containing surrogate ID, which is added to preserve all unique records, including older addresses that are linked to the same customer ID. 
 ```
 
 ***
