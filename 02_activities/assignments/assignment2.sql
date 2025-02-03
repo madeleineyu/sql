@@ -210,16 +210,31 @@ SET snapshot_timestamp = CURRENT_TIMESTAMP;
 /*2. Using `INSERT`, add a new row to the product_units table (with an updated timestamp). 
 This can be any product you desire (e.g. add another record for Apple Pie). */
 INSERT INTO temp.product_units
-VALUES(24, 'Mochi', '3 lbs', 3, 'lbs',CURRENT_TIMESTAMP);
+VALUES(8, 'Cherry Pie', '10"', 3, 'unit',CURRENT_TIMESTAMP);
 
 -- DELETE
 /* 1. Delete the older record for the whatever product you added. 
 
 HINT: If you don't specify a WHERE clause, you are going to have a bad time.*/
-DELETE FROM temp.product_units
-WHERE product_id = 24;
-SELECT * FROM temp.product_units;
 
+WITH Old AS (
+	SELECT
+	product_id
+	,snapshot_timestamp
+	,row_number() OVER (PARTITION BY product_id ORDER BY snapshot_timestamp DESC) as most_recent
+	FROM temp.product_units
+	)
+	
+DELETE FROM temp.product_units
+WHERE (product_id, snapshot_timestamp) IN (
+	SELECT 
+	product_id
+	,snapshot_timestamp
+	FROM Old
+	WHERE most_recent <>1
+	);
+	
+SELECT * FROM temp.product_units;
 
 
 -- UPDATE
