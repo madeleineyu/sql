@@ -45,8 +45,19 @@ There are several tools online you can use, I'd recommend [Draw.io](https://www.
 
 **HINT:** You do not need to create any data for this prompt. This is a conceptual model only. 
 
+
+### My logical model for a small bookstore
+<img src="./images/lmd2_first.png" width="600">
+
+
+
 #### Prompt 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
+
+### My logical model for a small bookstore with employee morning and evening shifts
+<img src="./images/lmd2.png" width="600">
+
+
 
 #### Prompt 3
 The store wants to keep customer addresses. Propose two architectures for the CUSTOMER_ADDRESS table, one that will retain changes, and another that will overwrite. Which is type 1, which is type 2? 
@@ -54,7 +65,7 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+The Type 1 model overwrites the old value with a new value and does not retain changes, while the Type 2 model does retain changes by adding a new row for the value and keeping the old value in the same file/table. The CUSTOMER_ADDRESS table can be a type 1 model, in which customer addresses will be overwritten with the most updated address associated with customer ID. On the other hand, the CUSTOMER_ADDRESS table can also be a type 2 model and retain changes with the help of a new column containing surrogate ID, which is added to preserve all unique records, including older addresses that are linked to the same customer ID. 
 ```
 
 ***
@@ -182,5 +193,5 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+Essentially, this article points out that the origin of all neural nets is based in layers and layers of individual human decisions. That is, when it comes down to it, LLMs are built upon a set of manmade categorizations by people with varying goals and intentions embedded in their decisions. For example, ImageNet used human labor in the form of tens of thousands of individuals recruited via Mechanical Turk to fine-tune its image recognition abilities. Although this effort was later expanded to more academic spheres, the use of Mechanical Turk to recruit online human labor likely invited many individuals who were primarily concerned with making money (and making money quickly). This likely introduced a lot of human error, despite implementation of controls, and variability in the names that images were given. The article goes on to cite an example of unsound and offensive naming of images that is present in ImageNet Roulette, and how even more manual labor is implemented to correct these types of mislabellings. But perhaps even more dangerous are the more unconscious biases that make their way into even the most earnest attempts at improving LLMs. Some of our biases are seemingly innocuous; but as LLMs grow larger, the effects of these decisions become even greater. For example, tagging images of faces within a constrained demographic further perpetuates the marginalization of the types of faces that society considers 'atypical' or beneath the 'ideal'. Stereotypes and biases (concious or unconsious) are based in man-made associations, some with long historical implications. Given the innate human-nature of the construction, and course correction, of neural nets, the ethical dilemma is that these biases embedded in their learning models will continue to persist because even 'corrections' are subject to the decisions of human individuals, who by their very nature are subjective beings. 
 ```
